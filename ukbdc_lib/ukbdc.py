@@ -120,14 +120,12 @@ class UKBDC(object):
 
 	def attach(self):
 		self.dev = usb.core.find(
-				find_all = True,
 				idVendor = self.vendorId,
 				idProduct = self.productId
 		)
-		if self.dev == []:
+		if self.dev is None:
 			raise RuntimeError("no device found")
 		try:
-			self.dev = self.dev[0]
 			usb.util.claim_interface(self.dev, self.interface)
 		except usb.core.USBError:
 			self.dev.detach_kernel_driver(self.interface)
