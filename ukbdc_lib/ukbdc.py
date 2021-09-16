@@ -79,14 +79,14 @@ class DeactivateLayout(Message):
 		super(DeactivateLayout, self).__init__(0x03)
 
 class Status(object):
-	IDLE			= 0
+	IDLE					= 0
 	UNEXPECTED_CONT_ERROR	= 1
-	CRC_ERROR		= 2
-	RECEIVING_MESSAGE	= 3
-	EXECUTING		= 4
-	MESSAGE_ERROR		= 6
-	BUSY_ERROR		= 7
-	WRONG_MESSAGE_ERROR	= 8
+	CRC_ERROR				= 2
+	RECEIVING_MESSAGE		= 3
+	EXECUTING				= 4
+	MESSAGE_ERROR			= 6
+	BUSY_ERROR				= 7
+	WRONG_MESSAGE_ERROR		= 8
 
 	@classmethod
 	def name(self, st):
@@ -108,12 +108,13 @@ class Status(object):
 			return "unknown message received"
 
 class UKBDC(object):
-	vendorId = 0x16c0
-	productId = 0x047c
-	interface = 1
-	ep_out = 0x03
-	ep_in = 0x82
-	tm_out = 1000
+	vendorId	= 0x16c0
+	productId	= 0x047c
+	interface	= 1
+	ep_out		= 0x03
+	ep_in		= 0x82
+	tm_out		= 1000
+
 	def __init__(self):
 		self.dev = None
 		pass

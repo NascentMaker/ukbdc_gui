@@ -132,6 +132,10 @@ mnemonics = {
 	128:	"volume_up",
 	129:	"volume_down",
 
+	165:	"prev",
+	164:	"play",
+	163:	"next",
+
 	0xe0:	"lctrl",
 	0xe1:	"lshift",
 	0xe2:	"lalt",
@@ -139,11 +143,7 @@ mnemonics = {
 	0xe4:	"rctrl",
 	0xe5:	"rshift",
 	0xe6:	"ralt",
-	0xe7:	"rgui",
-
-	0xab:	"next",
-	0xac:	"prev",
-	0xb0:	"play"
+	0xe7:	"rgui"
 }
 
 scancodes = {v:k for k, v in mnemonics.items()}
